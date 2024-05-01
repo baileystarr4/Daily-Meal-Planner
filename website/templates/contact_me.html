@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block title %}Contact Me{% endblock %} {% block content%}
+  <div class="container p-5 contact-me">
+    <h2 class="ms-1">Contact Me</h2>
+    <div class="ms-1 mt-2 mb-4">
+      <p class="text-white">
+        Have any feedback or want to get in touch? 
+        Fill out the form, and I'll get back to you as soon as possible.
+      </p>
+    </div>
+    <form method="POST" class="needs-validation" novalidate>
+      <div class="container border bg-dark p-5 pt-2 contact-form">
+
+        <div class="row">
+          <div class="col mt-4">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control small-input"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="col mt-4">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control small-input"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="col mt-4">
+            <label for="number" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control small-input"
+              id="number"
+              name="number"
+              placeholder="optional"
+            />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              name="subject"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <label for="body" class="form-label">Message</label>
+            <textarea
+              rows="10"
+              type="text"
+              class="form-control"
+              id="body"
+              name="body"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <fieldset required> 
+            <legend class="col-auto preferred-method mt-4 me-2">
+              Preferred contact method: 
+              </legend>
+            <div class="form-check form-check-inline col-auto mt-4 ms-2 me-2">
+              <input 
+                type="checkbox"
+                class="form-check-input"
+                id="email-preferred"
+                name="method"
+                value="email-preferred"
+                checked
+              />
+              <label for="email-preferred" class="form-check-label">Email</label>
+            </div>
+
+            <div class="form-check form-check-inline col-auto mt-4 ms-2 me-2">
+              <input 
+                type="checkbox"
+                class="form-check-input"
+                id="phone-preferred"
+                name="method"
+                value="phone-preferred"
+              />
+              <label for="phone-preferred" class="form-check-label">Phone</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button type="submit" class="btn btn-lg btn-dark border-light p-2">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
