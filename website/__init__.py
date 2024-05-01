@@ -1,9 +1,11 @@
 from flask import Flask
-from os import path
+import os
+from dotenv import load_dotenv
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'this is a random string'
+    load_dotenv()
+    app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 
     from .views import views
 
