@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Meal Plan{% endblock %} {% block content%}
+  <div class="container meal-plan border bg-dark p-5 mt-5">
+    <p class="meal-txt text-center">{{meals}}</p>
+    </div>
+  <form method="POST">
+    <div class="text-center m-5">
+      <button type="submit" class="btn btn-dark btn-lg border-light p-2">
+        Get New Meal Plan
+      </button>
+    </div>
+  </form>
+{% endblock %}
