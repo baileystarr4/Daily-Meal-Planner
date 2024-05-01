@@ -1,0 +1,60 @@
+body{
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+hr{
+    margin:auto;
+}
+.sign-up{
+    max-width: 700px;
+    text-align: center;
+}
+.number-input{
+    width:100px;
+}
+.center{
+    margin: auto;
+}
+.height-label{
+   font-size: 16px;
+}
+.disclaimer{
+    max-width: 550px;
+    font-size: 13px;
+
+}
+.meal-plan{
+    max-width: 900px;
+}
+.meal-txt{
+    white-space: pre-wrap;
+}
+.nav-tog{
+    border:none;
+    justify-self: end;
+}
+.nav-tog:focus{
+    box-shadow: none;
+}
+.contact-me{
+    max-width: 1000px;
+}
+.small-input{
+    min-width: 175px;
+}
+.linked-in{
+    margin-bottom: 0px;
+}
+.github{
+    height: 26px;
+}
+.email{
+    height: 30px;
+}
+.preferred-method{
+    font-size: 16px;
+}
