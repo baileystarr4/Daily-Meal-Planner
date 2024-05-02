@@ -33,7 +33,7 @@ def home():
                                                    activity_level=activity, 
                                                    goal=goal)
             
-            session["calories"] = calorie_calculator.get_calories()
+            session["calories"] = calorie_calculator.calories
             return redirect("/meal_plan", code=302)
 
     return render_template("home.html")

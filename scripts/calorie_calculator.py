@@ -35,6 +35,8 @@ class CalorieCalculator:
         self.activity_level = activity_level
         self.goal = goal
 
+        self.calories = None
+
         self._calculate_calories()
 
     def _calculate_BMR(self):
@@ -69,11 +71,8 @@ class CalorieCalculator:
                 self.calories = round(TDEE + 500)
             case "lose":
                 self.calories = round(TDEE - 500)
+                # Daily calorie intake should never fall under 1200
                 if self.calories < 1200:
                     self.calories = 1200
             case "maintain":
                 self.calories = round(TDEE)
-
-    def get_calories(self):
-        """Returns how many calories to eat per day to achieve weight goal."""
-        return self.calories
