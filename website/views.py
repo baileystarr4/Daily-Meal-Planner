@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, session, redirect, url_for
-from python.calorie_calculator import *
-from python.meal_planner import *
-from python.emailer import *
+from scripts.calorie_calculator import *
+from scripts.meal_planner import *
+from scripts.emailer import *
 
 views = Blueprint('views', __name__)
 
@@ -18,15 +18,20 @@ def home():
         
         # verify input
         if int(age) <= 18:
-            flash('You must be 18 years old or older to use this website.', category='error')
+            flash('You must be 18 years old or older to use this website.', 
+                  category='error')
         elif int(feet) <= 0 or int(inches) <= 0:
             flash('Please enter a valid height.', category='error')
         elif int(weight) <= 0:
             flash('Please enter a valid weight.', category='error')
         else:
-            calorie_calculator = Calorie_Calculator(age=int(age), sex=sex, feet=int(feet), 
-                                                    inches=int(inches), weight=int(weight), 
-                                                    activity_level=activity, weight_goal=goal)
+            calorie_calculator = CalorieCalculator(age=int(age), 
+                                                   sex=sex, 
+                                                   feet=int(feet), 
+                                                   inches=int(inches), 
+                                                   weight=int(weight), 
+                                                   activity_level=activity, 
+                                                   goal=goal)
             
             session["calories"] = calorie_calculator.get_calories()
             return redirect("/meal_plan", code=302)
@@ -38,7 +43,8 @@ def meal_plan():
     if request.method == 'GET':
         global meal_planner
         meal_planner = MealPlanner(session["calories"])
-    return render_template("meal_plan.html", meals = meal_planner.get_meal_plan())
+    return render_template("meal_plan.html", 
+                           meals = meal_planner.get_meal_plan())
 
 @views.route('/contact_me', methods=['GET', 'POST'])
 def contact_me():
@@ -59,6 +65,7 @@ def contact_me():
         else:
             emailer = Emailer(name, email, number, subject, body, method)
             emailer.send_email()
-            flash('Message sent! I will respond via your preferred method as soon as possible.', 
+            flash("""Message sent! I will respond via your preferred method as 
+                     soon as possible.""", 
                   category='success')
     return render_template("contact_me.html")

@@ -1,15 +1,19 @@
-{% extends "base.html" %} {% block title %}Daily Meal Planner{% endblock %} {% block content%}
-<div class="p-5">
-  <h2 class="text-center">Welcome to your daily meal planner.</h2>
-  <div class="text-center mt-2 mb-4">
-    <p class="text-white">
+{% extends "base.html" %} 
+
+{% block title %}Daily Meal Planner{% endblock %} 
+
+{% block content%}
+<div class="p-5 home">
+  <h2>Welcome to your daily meal planner.</h2>
+  <div class="mt-2 mb-4">
+    <p>
       Fill out the form to get your meals.
     </p>
   </div>
 
   <form method="POST" class="needs-validation" novalidate>
     <fieldset class="container sign-up border bg-dark pt-4 pb-5">
-      <legend class="text-center">Your Info</legend>
+      <legend>Your Info</legend>
 
       <div class=" row justify-content-center">
         <div class="col-auto m-3">
@@ -32,9 +36,9 @@
             name="sex"
             required
           >
-          <option selected disabled value="">Choose an option...</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+            <option selected disabled value="">Choose an option...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
         </div>
 
@@ -83,10 +87,10 @@
             name="goal"
             required
           >
-          <option selected disabled value="">Choose an option...</option>
-          <option value="lose">Lose weight</option>
-          <option value="maintain">Maintain weight</option>
-          <option value="gain">Gain weight</option>
+            <option selected disabled value="">Choose an option...</option>
+            <option value="lose">Lose weight</option>
+            <option value="maintain">Maintain weight</option>
+            <option value="gain">Gain weight</option>
           </select>
         </div>
       </div>
@@ -101,38 +105,52 @@
             name="activity"
             required
           >
-          <option selected disabled value="">Choose an option...</option>
-          <option value="sedentary">Sendentary: little to no exercise</option>
-          <option value="light">Lightly active: light exercise 1-3 days a week</option>
-          <option value="moderate">Moderately active: moderate exercise 3-5 days a week</option>
-          <option value="very">Very Active: intense exercise 6-7 times a week</option>
-          <option value="extra">Extremely Active: very intense exercise daily or a physical job</option>
+            <option selected disabled value="">
+              Choose an option...
+            </option>
+            <option value="sedentary">
+              Sendentary: little to no exercise
+            </option>
+            <option value="light">
+              Lightly active: light exercise 1-3 days a week
+            </option>
+            <option value="moderate">
+              Moderately active: moderate exercise 3-5 days a week
+            </option>
+            <option value="very">
+              Very Active: intense exercise 6-7 times a week
+            </option>
+            <option value="extra">
+              Extremely Active: very intense exercise daily or a physical job
+            </option>
           </select>  
         </div>  
       </div>
     </fieldset>
 
     <div class="row justify-content-center mt-4">
-      <div class="col disclaimer text-center">
+      <div class="col disclaimer">
         <small>
-        Disclaimer:<br>
-        The meal plan recommendations provided are intended for informational purposes only.
-        The meal plans are based on the calories needed to meet specific weight goals, 
-        but individual nutritional needs may vary.
-        Before starting any new diet or meal plan, it is recommended to consult with a 
-        qualified healthcare professional, such as a registered dietitian or doctor.
-        By clicking the button below, you acknowledge that the meal plan recommendations are not a 
-        substitute for professional medical advice, diagnosis, or treatment.
-        I do not assume any responsibility for any adverse effects or consequences 
-        resulting from the use of the meal plans provided.
+          Disclaimer:<br>
+          The meal plan recommendations provided are intended for informational 
+          purposes only. The meal plans are based on the calories needed to 
+          meet specific weight goals, but individual nutritional needs may 
+          vary. Before starting any new diet or meal plan, it is recommended 
+          to consult with a qualified healthcare professional, such as a 
+          registered dietitian or doctor. By clicking the button below, you 
+          acknowledge that the meal plan recommendations are not a substitute 
+          for professional medical advice, diagnosis, or treatment. I do not 
+          assume any responsibility for any adverse effects or consequences 
+          resulting from the use of the meal plans provided.
         </small>
       </div>
     </div>
 
-    <div class="text-center mt-4">
+    <div class="mt-4">
       <button type="submit" class="btn btn-dark btn-lg border-light p-2">
         Get Meal Plan
       </button>
     </div>
-  </form></div>
+  </form>
+</div>
 {% endblock %}
