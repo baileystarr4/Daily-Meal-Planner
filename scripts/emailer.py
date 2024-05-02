@@ -42,7 +42,7 @@ class Emailer:
         self.SENDER_EMAIL = os.getenv("SENDER_EMAIL")
         self.RECEIVER_EMAIL = "baileystarrc4@gmail.com"
 
-    def create_email(self):
+    def _create_email(self):
         message = MIMEMultipart("alternative")
         message["Subject"] = self.subject
         message["From"] = self.SENDER_EMAIL
@@ -65,7 +65,7 @@ class Emailer:
         form to my email address.
         """
 
-        email_message = self.create_email()
+        email_message = self._create_email()
         with smtplib.SMTP_SSL(
             "smtp.gmail.com", 465, context=ssl.create_default_context()
         ) as email:

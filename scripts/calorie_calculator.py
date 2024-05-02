@@ -35,9 +35,9 @@ class CalorieCalculator:
         self.activity_level = activity_level
         self.goal = goal
 
-        self.calculate_calories()
+        self._calculate_calories()
 
-    def calculate_BMR(self):
+    def _calculate_BMR(self):
         # calculates BMR using Harris-Benedict formula
         if self.sex == 'male':
             BMR = (66.5 + (13.75 * self.weight) + (5.003 * self.height) 
@@ -47,8 +47,8 @@ class CalorieCalculator:
                    - (4.676 * self.age))
         return BMR
 
-    def calculate_TDEE(self):
-        BMR = self.calculate_BMR()
+    def _calculate_TDEE(self):
+        BMR = self._calculate_BMR()
         match self.activity_level:
             case "sedentary":
                 TDEE = BMR * 1.2
@@ -62,8 +62,8 @@ class CalorieCalculator:
                 TDEE = BMR * 1.9
         return TDEE
 
-    def calculate_calories(self):
-        TDEE = self.calculate_TDEE()
+    def _calculate_calories(self):
+        TDEE = self._calculate_TDEE()
         match self.goal:
             case "gain":
                 self.calories = round(TDEE + 500)
