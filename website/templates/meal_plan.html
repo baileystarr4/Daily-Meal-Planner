@@ -4,7 +4,7 @@
 
 {% block content%}
 <div class="container meal-plan border bg-dark p-5 mt-5">
-  <p class="meal-txt">{{meals}}</p>
+  <p class="meal-txt px-4 p-3">{{meals.replace("#","").replace("*","")}}</p>
 </div>
 
 <!-- Generates a new meal plan -->

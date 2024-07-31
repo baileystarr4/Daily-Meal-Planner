@@ -27,7 +27,7 @@
 
   <body class="bg-dark bg-gradient text-white d-flex flex-column min-vh-100">
 
-    <nav class="navbar ms-4 me-4 navbar-expand-lg border-bottom 
+    <nav class="navbar mx-4 navbar-expand-lg border-bottom 
                 border-secondary">
       <!-- navbar brand / title -->
       <a class="navbar-brand me-0" href="/">
@@ -56,14 +56,14 @@
       >
         <div class="navbar-nav ">
           <a 
-            class="nav-item nav-link text-white" 
+            class="nav-item nav-link text-white ms-3" 
             id="home" 
             href="/"
           >
             Home
           </a>
           <a 
-            class="nav-item nav-link text-white" 
+            class="nav-item nav-link text-white ms-3" 
             id="contact_me" 
             href="/contact_me"
           >
@@ -116,12 +116,12 @@
       {% block content %} {% endblock %}
     </div>
 
-    <footer class="container-fluid mt-5 pt-5">
-      <div class="row align-items-center justify-content-between">
-        <div class="col">
+    <footer class="container-fluid pt-5">
+      <div class="row align-items-center justify-content-center justify-content-md-between">
+        <div class="col-auto">
           <div class="row align-items-center">
 
-            <div id="GitHub" class="col-auto m-2">
+            <div id="GitHub" class="col mx-2">
               <a 
                 href="https://github.com/baileystarr4/Daily-Meal-Planner" 
                 target="_blank"
@@ -134,7 +134,7 @@
               </a>
             </div>
 
-            <div id="Gmail" class="col-auto m-2">
+            <div id="Gmail" class="col mx-2">
               <a 
                 href="mailto:baileystarrc4@gmail.com" 
                 target="_blank"
@@ -147,7 +147,7 @@
               </a>
             </div>
 
-            <div id= LinkedIn class="col-auto m-2">
+            <div id= LinkedIn class="col mx-2">
               <a 
                 href="https://www.linkedin.com/in/bailey-crumpler" 
                 target="_blank"
@@ -162,7 +162,7 @@
           </div>
         </div>
         
-        <div id="OpenAI" class="col-auto align-content-center m-2">
+        <div id="OpenAI" class="col-auto mx-2 my-4">
           <a href="https://openai.com/" target="_blank">
             <img src="static/images/openai.svg" alt="OpenAI Attribution"/>
           </a>

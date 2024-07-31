@@ -4,19 +4,16 @@
 
 {% block content%}
 <div class="p-5 home">
-  <h2>Welcome to your daily meal planner.</h2>
-  <div class="mt-2 mb-4">
-    <p>
+  <h2 class="fw-bold">Welcome to your daily meal planner.</h2>
+  <p class="pt-3 pb-4">
       Fill out the form to get your meals.
-    </p>
-  </div>
+  </p>
 
   <form method="POST" class="needs-validation" novalidate>
-    <fieldset class="container sign-up border bg-dark pt-4 pb-5">
-      <legend>Your Info</legend>
+    <fieldset class="container sign-up border bg-dark py-4">
 
-      <div class=" row justify-content-center">
-        <div class="col-auto m-3">
+      <div class="row justify-content-center">
+        <div class="col-auto m-3 mt-2">
           <label for="age" class="form-label">Age</label>
           <input
             type="number"
@@ -28,7 +25,7 @@
           />
         </div>
 
-        <div class="col-auto m-3">
+        <div class="col-auto m-3 mt-2">
           <label for="sex" class="form-label">Sex</label>
           <select
             class="form-control"
@@ -42,7 +39,7 @@
           </select>
         </div>
 
-        <div class="col-auto m-3">
+        <div class="col-auto m-3 mt-2">
           <label for="weight" class="form-label">Weight</label>
           <input
             type="number"
@@ -128,8 +125,8 @@
       </div>
     </fieldset>
 
-    <div class="row justify-content-center mt-4">
-      <div class="col disclaimer">
+    <div class="row justify-content-center p-4">
+      <div class="col disclaimer p-0">
         <small>
           Disclaimer:<br>
           The meal plan recommendations provided are intended for informational 
@@ -146,11 +143,10 @@
       </div>
     </div>
 
-    <div class="mt-4">
-      <button type="submit" class="btn btn-dark btn-lg border-light p-2">
-        Get Meal Plan
-      </button>
-    </div>
+    <button type="submit" class="btn btn-dark btn-lg border-light mt-3">
+      Get Meal Plan
+    </button>
+
   </form>
 </div>
 {% endblock %}
