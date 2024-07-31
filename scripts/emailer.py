@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 class Emailer:
     """
     A class used to send a message obtained via the Contact Me form to 
-    my email address, baileystarrc4@gmail.com.
+    my email address.
 
     """
     
@@ -17,18 +17,18 @@ class Emailer:
 
         Parameters
         ----------
-            name : str
-                the user's name
-            email : int
-                the user's email addres
-            number : int, optional
-                the user's phone number
-            subject : int
-                the subject of the message
-            body : str
-                the body of the message
-            method : str
-                the user's preferred contact method (default is email)
+        name : str
+            the user's name
+        email : str
+            the user's email address
+        number : str, optional
+            the user's phone number
+        subject : str
+            the subject of the message
+        body : str
+            the body of the message
+        method : str
+            the user's preferred contact method (default is email)
         """
 
         self.name = name
@@ -48,11 +48,10 @@ class Emailer:
         message["From"] = self.SENDER_EMAIL
         message["To"] = self.RECEIVER_EMAIL
 
-        text = f"""\
-            {self.body} \n
-            Name: {self.name} \n
-            Contact: {self.email}, {self.number}\n
-            Contact Method : {self.method}"""
+        text = (f"Name: {self.name} \n"
+                f"Contact: {self.email}, {self.number}\n"
+                f"Contact Method : {self.method}\n"
+                f"{self.body}")
         
         email = MIMEText(text, "plain")
         message.attach(email)
