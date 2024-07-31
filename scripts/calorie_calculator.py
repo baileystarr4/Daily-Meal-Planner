@@ -12,18 +12,18 @@ class CalorieCalculator:
 
         Parameters
         ----------
-            sex : str
-                the user's sex
-            age : int
-                the user's age
-            height : int
-                the user's height in cm
-            weight : int
-                the user's weight in kg
-            activity_level : str
-                the user's activity level
-            goal : str
-                the user's weight goal
+        sex : str
+            the user's sex
+        age : int
+            the user's age
+        height : int
+            the user's height in cm
+        weight : int
+            the user's weight in kg
+        activity_level : str
+            the user's activity level
+        goal : str
+            the user's weight goal
         """
 
         self.sex = sex
