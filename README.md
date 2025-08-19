@@ -1,6 +1,6 @@
 # Daily Meal Planner
 
-<p float="left">
+<p align="center">
   <img src="screenshots/homepage.png" width="250" />
   <img src="screenshots/meal_plan_top.png" width="250" />
   <img src="screenshots/meal_plan_bottom.png" width="250" />
