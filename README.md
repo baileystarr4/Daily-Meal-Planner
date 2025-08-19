@@ -11,7 +11,7 @@
 <br>
 
 A web app that generates personalized daily meal plans based on a user’s calorie goal.  
-It calculates calorie needs using the [**Harris-Benedict equation**](https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation) and then generates a customized meal plan using the **OpenAI API** (Mini 5 model).  
+It calculates calorie needs using the [Harris-Benedict equation](https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation) and then generates a customized meal plan using the OpenAI API (GPT-5 mini model).  
 
 ---
 
@@ -50,11 +50,11 @@ It calculates calorie needs using the [**Harris-Benedict equation**](https://en.
 
 ## About This Project
 This project was created to practice **full-stack development, working with REST APIs, AI integration, and web deployment**. It demonstrates:  
-- Writing Python scripts to calculate daily calorie targets using the **Harris–Benedict formula** based on user inputs    
-- Integrating the **OpenAI Chat Completions API (Mini 5 model)** to generate daily meal plans  
-- Using **prompt engineering** to fine-tune AI-generated outputs  
-- Building a responsive web interface with **Flask, Jinja2 templates, and Bootstrap**  
-- Deploying a production-ready web app on **Vercel**
+- Writing Python scripts to calculate daily calorie targets using the Harris–Benedict formula based on user inputs    
+- Integrating the OpenAI Chat Completions API (GPT-5 mini model) to generate daily meal plans  
+- Using prompt engineering to fine-tune AI-generated outputs
+- Building a responsive web interface with Flask, Jinja2 templates, and Bootstrap
+- Deploying a production-ready web app on Vercel
 
 ---
  <br/>
