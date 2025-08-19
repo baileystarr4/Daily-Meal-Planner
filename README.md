@@ -57,6 +57,18 @@ This project was created to practice **full-stack development, working with REST
 - Deploying a production-ready web app on Vercel
 
 ---
+
+## Reporting Issues
+If you find bugs or have suggestions, please open an issue here:
+
+**[Daily Meal Planner Issues](https://github.com/baileystarr4/Daily-Meal-Planner/issues)**
+
+---
+
+## License  
+This project is licensed under the [MIT License](LICENSE).  
+
+---
  <br/>
 
 >**Disclaimer**  
